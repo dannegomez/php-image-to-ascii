@@ -1,5 +1,7 @@
 # php-image-to-ascii
-Create a ascii art of a image
+Create ascii art of a image
+
+Outputs to either plan text or html wrapped chars
 
 
 ## Example
