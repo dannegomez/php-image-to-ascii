@@ -114,8 +114,10 @@ class Ascii
 
     /**
      * Create ascii of the image
+     * 
+     * @param string $filename Name of file to save to
      */
-    public function create_ascii_to_file()
+    public function create_ascii_to_file($filename = "")
     {
         //destory old image if called multiple times
         if (!empty($this->ascii_image)) {
@@ -129,7 +131,7 @@ class Ascii
         $this->create_ascii_image("file");
 
         //save file
-        $this->save_file("");
+        $this->save_file($filename);
     }
 
     /**
@@ -155,6 +157,7 @@ class Ascii
     /**
      * Save ascii to file
      * 
+     * @param string $save_filename Name of file to save to
      * @return bool Status of save
      */
     public function save_file($save_filename = "")
