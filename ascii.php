@@ -5,15 +5,50 @@
  * 
  * Created by
  * Daniel Gomez-Ortega
+ * 2020
  */
 class Ascii
 {
+    /**
+     * Image data: width, height
+     * @var array
+     */
     private $image_data = [];
+
+    /**
+     * String with file path to input image
+     * @var string
+     */
     private $image_filename = "";
+
+    /**
+     * GD image object of input image 
+     * @var image
+     */
     private $image_file = null;
+
+    /**
+     * Array with color of sampled pixels
+     * @var array
+     */
     private $image_sampled_pixels = [[]];
+
+    /**
+     * Step size for sample 
+     * @var int
+     */
     public $sample_size = 10;
+
+    /**
+     * Array with ascii char "colors"
+     * @var array
+     */
     public $ascii_chars = [];
+
+    /**
+     * String with ascii text output
+     * @var array
+     */
     private $ascii_image = "";
 
     /**
@@ -23,8 +58,7 @@ class Ascii
      */
     public function __construct($filename)
     {
-        $this->ascii_chars = str_split(".~:;!jX0@#");
-        $this->ascii_chars = array_reverse($this->ascii_chars);
+        $this->ascii_chars = str_split("#@0Xj!;:~.");
         $this->sample_size = count($this->ascii_chars);
 
         $this->image_filename = $filename;
