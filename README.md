@@ -4,6 +4,20 @@ Create ascii art of a image
 Outputs to either plan text or html wrapped chars
 
 
+## How to use
+```PHP
+include('ascii.php');
+
+$Ascii = new Ascii("images/input.jpg");
+
+//outputs in browser
+$Ascii->create_ascii_to_html(); 
+
+//or use this to save to file
+$Ascii->create_ascii_to_file(); 
+```
+
+
 ## Example
 Input image
 
